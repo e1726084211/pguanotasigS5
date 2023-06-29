@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pguanotasigS5.MainPage">
+
+    <StackLayout>
+        <Label Text="CONSUMO DE SERVICIO WEB " HorizontalTextAlignment="Center" FontSize="24"/>
+
+        <ListView x:Name="listaEstudiantes" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lnlNombre" Text="{Binding producto}"/>
+                            <Label x:Name="lnlApellido" Text="{Binding horaPedido}"/>
+                            
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnMostrar" Clicked="btnMostrar_Clicked" Text="Mostrar"/>
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pguanotasigS5.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="CONSUMO DE SERVICIO WEB " HorizontalTextAlignment="Center" FontSize="24"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="red" Text="Nombre" FontSize="18" Grid.Row="0" Grid.Column="0"/>
+                <Label TextColor="red" Text="Apellido" FontSize="18" Grid.Row="0" Grid.Column="1"/>
+                <Label TextColor="red" Text="Edad" FontSize="18" Grid.Row="0" Grid.Column="2"/>
+            </Grid>
+            <Label Text="-------------------------------------------------------------------------"/>
+            <ListView x:Name="listaEstudiantes">
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblNombre" Text="{Binding producto}" Grid.Row="0" Grid.Column="0"/>
+                                <Label x:Name="lblApellido" Text="{Binding horaPedido}" Grid.Row="0" Grid.Column="1"/>
+                                <Label x:Name="lblEdad" Text="{Binding edad}" Grid.Row="0" Grid.Column="2"/>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+                </ListView.ItemTemplate>
+                </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
